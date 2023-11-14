@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body  class="bg-blend-overlay w-screen  " style="background: rgba(115, 114, 116, 0.7) url(images/circle-scatter-haikei.png); background-repeat: no-repeat ; background-size: cover;">
   <header>
     <div class="flex justify-between bg-sky-100 p-4 px-8 items-center">
       <div class="">
@@ -26,14 +26,14 @@
   </header>
 
 
-  <main>
+  <main >
     <!-- container -->
     <div class=" mt-12 lg:w-11/12 mx-auto px-4 flex flex-col  lg:flex-row  ">
       <div class=" flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
 
         <!-- first card -->
-        <div class="card w-96 text-center pt-5 bg-base-100 shadow-xl border ">
+        <div class="card w-96 text-center pt-5 bg-base-100  border ">
           <figure><img src="images/triangle.png" alt="Shoes" /></figure>
           <div class="card-body">
             <h2 class="  text-3xl font-bold text-gray-600">Triangle</h2>
@@ -56,7 +56,7 @@
 
 
         <!-- second card -->
-        <div class="card w-96 text-center pt-5 bg-base-100 shadow-xl border">
+        <div class="card w-96 text-center pt-5 bg-base-100  border">
           <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
           <div class="card-body">
             <h2 class=" text-3xl font-bold text-gray-600">Rectangle</h2>
@@ -79,7 +79,7 @@
 
 
         <!-- third card -->
-        <div class="card w-96 text-center pt-5 bg-base-100 shadow-xl border">
+        <div class="card w-96 text-center pt-5 bg-base-100  border">
           <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
           <div class="card-body">
             <h2 class=" text-3xl font-bold text-gray-600">Parallelogram</h2>
@@ -99,15 +99,92 @@
             </div>
           </div>
         </div>
+
+        <!-- 4th card  -->
+        <div class="card w-96 text-center pt-5 bg-base-100  border">
+          <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class=" text-3xl font-bold text-gray-600">Rhombus</h2>
+            <p>Area (A) = 0.5 x d<sub>1</sub> x d <sub>2</sub></p>
+            <p>
+              <input class="bg-gray-200 w-24 px-3 rounded-sm text-sm  " type="text" placeholder="dimension1"
+                id="rhombus-dimension1">
+              <span class="ml-2">cm</span>
+              <input class="bg-gray-200 w-24 px-3 rounded-sm  text-sm ml-4" type="text" placeholder="dimension2"
+                id="rhombus-dimension2">
+              <span class="ml-2">cm</span>
+            </p>
+            <p class="text-start text-2xl p-2">Area: <span class="font-bold text-green-600" id="rhombus-area">0</span>
+              cm<sup>2</sup></p>
+            <div class="card-actions">
+              <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5th card  -->
+        <div class="card w-96 text-center pt-5 bg-base-100  border">
+          <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class=" text-3xl font-bold text-gray-600">Pentagon</h2>
+            <p>Area (A) = 0.5 x p x b</p>
+            <p>
+              <input class="bg-gray-200 w-24 px-2 rounded-sm text-sm" type="text" placeholder="perimeter"
+                id="perimeter-area">
+              <span class="ml-2">cm</span>
+              <input class="bg-gray-200 w-24 px-2 rounded-sm text-xsm ml-4" type="text" placeholder="apothem"
+                id="apothem-area">
+              <span class="ml-2">cm</span>
+            </p>
+            <p class="text-start text-2xl p-2">Area: <span class="font-bold text-green-600" id="pentagon-area">0</span>
+              cm<sup>2</sup></p>
+            <div class="card-actions">
+              <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 6th card  -->
+        <div class="card w-96 text-center pt-5 bg-base-100  border">
+          <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class=" text-3xl font-bold text-gray-600">Ellipse</h2>
+            <p>Area (A) = πab</p>
+            <p>
+              <input class="bg-gray-200 w-24 px-2 rounded-sm text-sm" type="text" placeholder="major"
+                id="ellipse-major">
+              <span class="ml-2">cm</span>
+              <input class="bg-gray-200 w-24 px-2 rounded-sm text-sm ml-4" type="text" placeholder="minor"
+                id="ellipse-minor">
+              <span class="ml-2">cm</span>
+            </p>
+            <p class="text-start text-2xl p-2">Area: <span class="font-bold text-green-600" id="ellipse-area">0</span>
+              cm<sup>2</sup></p>
+            <div class="card-actions">
+              <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="lg:w-[400px] w-96 border text-center">
-        <div class="text-4xl">Area Calculation</div>
+        <div class="text-4xl mt-6 underline text-green-600">Area Calculation</div>
       </div>
     </div>
-
   </main>
+  <footer class="mt-12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-24 ">
+    <div class=" flex justify-between items-center lg:w-4/5 md:h-4/5 w-3/4 mx-auto"> 
+      <div>
+        <h2 class="text-2xl text-white font-semibold "> The Interactive of Geometry Genius</h2>
+      <p class="text-white ">All Rights Reseverd By Rayhan 2023</p>
+      </div>
+      <img class="w-1/5 " src="images/geometry.png" alt="">
+    </div>
+  </footer>
+
 
   <script src="js/area-calculate.js"></script>
 </body>
+
 
 </html>

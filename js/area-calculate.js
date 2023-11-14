@@ -70,15 +70,44 @@ function calculateParallelogramArea() {
     const area = base * height;
   
  setElementTextById('parallelogram-area', area)
+
+
+}
+function calculateRhombusArea() {
+    const rhombusDimensionOne = getInputValue('rhombus-dimension1');
+    const rhombusDimensionTwo = getInputValue('rhombus-dimension2');
+   
+    const area = 0.5 * rhombusDimensionOne * rhombusDimensionTwo;
+
+    setElementTextById('rhombus-area', area);
+    
+}
+function calculatePentagonArea() {
+    const perimeter = getInputValue('perimeter-area');
+    const apothem = getInputValue('apothem-area');
+    const area = 0.5 * perimeter * apothem;
+    setElementTextById ('pentagon-area', area);
+}
+
+
+function calculateEllipseArea() {
+    const major = getInputValue ('ellipse-major');
+    const minor = getInputValue ('ellipse-minor');
+    const  area = Math.PI * major * minor;
+    const areaTwoFixed = area.toFixed(2);
+    setElementTextById('ellipse-area', areaTwoFixed);
 }
 
 function getInputValue(fieldId) {
     const inputField = document.getElementById(fieldId);
     const inputValueText = inputField.value;
     const value = parseFloat(inputValueText);
+    inputField.value = '';
     return value;
    
 }
+
+
 
 function setElementTextById(elementId, area) {
     const element = document.getElementById(elementId);
